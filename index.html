@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>DBC UNIVERSE X </title>
+    <style>
+        body {
+            background: url('gem.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'arial' sans-serif;
+            background-color: #f0f0f5;
+            margin: 0;
+            padding: 5;
+            color: #333;
+            overflow-x: hidden;
+            font-weight: bold;
+        }
+        
+        @keyframes slide {
+            0% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        
+        .header {
+            background-color: #ff6600;
+            /* Cor mais viva */
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            animation: slide 10s linear infinite;
+        }
+        
+        .header .cupom {
+            float: left;
+        }
+        
+        .header .cart {
+            float: right;
+            color: white;
+        }
+        
+        .header::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .main {
+            margin-left: 220px;
+            padding: 80px 20px 20px 20px;
+            text-align: center;
+        }
+        
+        h1,
+        h2 {
+            color: #e60012;
+        }
+        
+        .content {
+            background-color: rgb(241, 129, 129);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            top: 250px;
+            margin-top: 70px;
+        }
+        
+        .tutorial {
+            margin-top: 20px;
+        }
+        
+        .step {
+            margin-bottom: 15px;
+        }
+        
+        .step strong {
+            color: #0080ff;
+        }
+        
+        footer {
+            background-color: #ffcc00;
+            color: #1c1c1c;
+            padding: 10px 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        
+        .navbar {
+            position: fixed;
+            top: 38px;
+            left: 0;
+            width: 100%;
+            background-color: #000;
+            /* Cor de fundo preta */
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+        }
+        
+        .navbar::before {
+            content: "";
+            position: absolute;
+            top: -38px;
+            /* Altura do espaço adicional preenchido */
+            left: 0;
+            width: 100%;
+            height: 38px;
+            /* Altura do espaço adicional preenchido */
+            background-color: #000;
+            /* Mesma cor de fundo preta */
+        }
+        
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar ul li {
+            margin: 0 15px;
+        }
+        
+        .navbar ul li a {
+            color: #fff;
+            /* Cor do texto branca */
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #aab14c;
+            /* Cor de fundo laranja */
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            animation: blink 1s infinite;
+            /* Animação de piscar */
+        }
+        
+        @keyframes blink {
+            0%,
+            100% {
+                background-color: #aa7615;
+                /* Cor inicial */
+            }
+            50% {
+                background-color: #FF8C00;
+                /* Cor de destaque */
+            }
+        }
+        
+        .navbar ul li a:hover {
+            background-color: #FF8C00;
+            /* Cor de fundo ao passar o mouse */
+        }
+        
+        .discord-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #7289da;
+            font-weight: bold;
+        }
+        
+        .discord-link img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+        
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .footer-social a {
+            color: #1c1c1c;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.5em;
+            }
+            .navbar ul li a {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header {
+                font-size: 1.2em;
+                padding: 10px 15px;
+            }
+            .navbar ul li a {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+            .content {
+                padding: 15px;
+            }
+            .logo {
+                width: 100px;
+            }
+        }
+        
+        footer .copyright {
+            margin: 0;
+        }
+        
+        footer .links {
+            margin-top: 10px;
+        }
+        
+        footer .links a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        footer .links a:hover {
+            color: #ff9900;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="cupom">CUPOM: DBC-UNIVERSE X 15% de desconto!</div>
+    </div>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="store.html">Loja</a></li>
+            <li>
+                <a href="Tutorial.html">Tutorial</a>
+            </li>
+        </ul>
+    </div>
+
+    <main>
+        <div class="content">
+            <img src="gem.png" alt="dragon ball logo" class="logo">
+            <h2>Sobre Dragon Ball</h2>
+            <p><strong>Dragon Ball é uma série de mangá e anime criada por Akira Toriyama. A história segue Goku e seus amigos enquanto eles protegem a Terra de vilões poderosos. A série é conhecida por suas emocionantes batalhas e personagens icônicos.</strong></p>
+
+            <div class="tutorial">
+                <h2>Tutorial: Como Entrar no Servidor de Minecraft</h2>
+                <div class="step">
+                    <strong>Passo 1:</strong> Abra o Minecraft e vá para a tela de multijogador.
+                </div>
+                <div class="step">
+                    <strong>Passo 2:</strong> Clique em "Adicionar Servidor" e insira o endereço IP do servidor no campo apropriado.
+                </div>
+                <div class="step">
+                    <strong>Passo 3:</strong> Dê um nome ao servidor e clique em "Concluído".
+                </div>
+                <div class="step">
+                    <strong>Passo 4:</strong> Selecione o servidor na lista e clique em "Entrar no Servidor" para começar a jogar.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <h2>Dragon Ball Universe</h2>
+        <div> <img src="goku.png" alt="Goku"> <img src="vegeta.png" alt="Vegeta"> <img src="shenron.png" alt="Shenron"> </div>
+        <p>Conecte-se com a gente nas redes sociais!</p>
+        <div class="footer-social">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+            <a href="https://discord.gg/JB4F5vTPgG" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+        </div>
+        <div class="copyright">
+
+
+        </div>
+        <div class="links"> <a href="#privacy">Política de Privacidade</a> <a href="#terms">Termos de Uso</a> <a href="#contact">Contato</a> </div>
+        <p>&copy; 2025 Dragon Ball Universe X. Todos os direitos reservados.</p>
+    </footer>
+
+
+</body>
+
+</html>
